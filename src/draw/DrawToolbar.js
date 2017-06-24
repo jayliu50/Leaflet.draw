@@ -47,12 +47,12 @@ L.DrawToolbar = L.Toolbar.extend({
 			},
 			{
 				enabled: this.options.rectangle,
-				handler: new L.Draw.Rectangle(map, this.options.rectangle),
+				handler: new L.Draw.RectangleTap(map, this.options.rectangle),
 				title: L.drawLocal.draw.toolbar.buttons.rectangle
 			},
 			{
 				enabled: this.options.circle,
-				handler: new L.Draw.Circle(map, this.options.circle),
+				handler: new L.Draw.CircleTap(map, this.options.circle),
 				title: L.drawLocal.draw.toolbar.buttons.circle
 			},
 			{

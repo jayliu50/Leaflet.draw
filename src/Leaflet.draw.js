@@ -107,7 +107,15 @@ L.drawLocal = {
 		handlers: {
 			circle: {
 				tooltip: {
-					start: 'Click and drag to draw circle.'
+					start: 'Click to set the center.',
+					end: 'Click to set edge of circle.'
+				},
+				radius: 'Radius'
+			},
+			circleTap: {
+				tooltip: {
+					start: 'Click to set the center.',
+					end: 'Click to set edge of circle.'
 				},
 				radius: 'Radius'
 			},
@@ -139,6 +147,11 @@ L.drawLocal = {
 			simpleshape: {
 				tooltip: {
 					end: 'Release mouse to finish drawing.'
+				}
+			},
+			simpleshapetap: {
+				tooltip: {
+					end: 'Click again to finish shape.'
 				}
 			}
 		}

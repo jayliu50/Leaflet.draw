@@ -70,8 +70,9 @@ L.Draw.Feature = L.Handler.extend({
 		if (this._map) {
 			L.DomUtil.enableTextSelection();
 
-			this._tooltip.dispose();
-			this._tooltip = null;
+			// todo: bring back tooltip functionality
+			// this._tooltip.dispose();
+			// this._tooltip = null;
 
 			L.DomEvent.off(this._container, 'keyup', this._cancelDrawing, this);
 		}

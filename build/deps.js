@@ -13,8 +13,10 @@ var deps = {
 			'draw/handler/Draw.Polyline.js',
 			'draw/handler/Draw.Polygon.js',
 			'draw/handler/Draw.SimpleShape.js',
+			'draw/handler/Draw.SimpleShape.Tap.js',
 			'draw/handler/Draw.Rectangle.js',
 			'draw/handler/Draw.Circle.js',
+			'draw/handler/Draw.Circle.Tap.js',
 			'draw/handler/Draw.Marker.js'
 		],
 		desc: 'Drawing handlers for: polylines, polygons, rectangles, circles and markers.',
