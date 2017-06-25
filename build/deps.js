@@ -15,6 +15,7 @@ var deps = {
 			'draw/handler/Draw.SimpleShape.js',
 			'draw/handler/Draw.SimpleShape.Tap.js',
 			'draw/handler/Draw.Rectangle.js',
+			'draw/handler/Draw.Rectangle.Tap.js',
 			'draw/handler/Draw.Circle.js',
 			'draw/handler/Draw.Circle.Tap.js',
 			'draw/handler/Draw.Marker.js'

@@ -144,12 +144,18 @@ L.drawLocal = {
 					start: 'Click and drag to draw rectangle.'
 				}
 			},
+			rectangleTap: {
+				tooltip: {
+					start: 'Click to set first corner of rectangle.',
+					end: 'Click to set diagonal corner.'
+				}
+			},
 			simpleshape: {
 				tooltip: {
 					end: 'Release mouse to finish drawing.'
 				}
 			},
-			simpleshapetap: {
+			simpleshapeTap: {
 				tooltip: {
 					end: 'Click again to finish shape.'
 				}
