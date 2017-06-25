@@ -9,8 +9,6 @@ L.Draw.CircleTap = L.Draw.SimpleShapeTap.extend({
 		TYPE: 'circle'
 	},
 
-	Circle: L.Circle,
-
 	options: {
 		shapeOptions: {
 			stroke: true,
@@ -46,7 +44,6 @@ L.Draw.CircleTap = L.Draw.SimpleShapeTap.extend({
 
 	_drawShape: function (latlng) {
 		if (!this._shape) {
-
 			this._shape = new L.Circle(this._startLatLng, this._startLatLng.distanceTo(latlng), this.options.shapeOptions);
 			this._map.addLayer(this._shape);
 		} else {

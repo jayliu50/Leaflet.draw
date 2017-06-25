@@ -5,12 +5,9 @@
  * @inherits L.Draw.SimpleShapeTap
  */
 L.Draw.RectangleTap = L.Draw.SimpleShapeTap.extend({
-// L.Draw.RectangleTap = L.Draw.SimpleShapeTap.extend({
 	statics: {
 		TYPE: 'rectangle'
 	},
-
-	Rectangle: L.Rectangle,
 
 	options: {
 		shapeOptions: {
@@ -29,6 +26,12 @@ L.Draw.RectangleTap = L.Draw.SimpleShapeTap.extend({
 
 	// @method initialize(): void
 	initialize: function (map, options) {
+
+		// if touch, switch to touch icon
+		if (L.Browser.touch) {
+			this.options.icon = this.options.touchIcon;
+		}
+
 		// Save the type so super can fire, need to do this as cannot do this.TYPE :(
 		this.type = L.Draw.RectangleTap.TYPE;
 
@@ -53,13 +56,6 @@ L.Draw.RectangleTap = L.Draw.SimpleShapeTap.extend({
 	},
 
 
-	_finishShape: function (latlng) {
-		this._drawShape(latlng);
-		this._fireCreatedEvent();
-		this.disable(); // todo: find out why this doesn't work
-	},
-
-
 	_getTooltipText: function () {
 		var tooltipText = L.Draw.SimpleShapeTap.prototype._getTooltipText.call(this),
 			shape = this._shape,
@@ -77,4 +73,5 @@ L.Draw.RectangleTap = L.Draw.SimpleShapeTap.extend({
 			subtext: subtext
 		};
 	}
+
 });

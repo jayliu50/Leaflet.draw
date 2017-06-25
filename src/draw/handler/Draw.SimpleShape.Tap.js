@@ -41,7 +41,7 @@ L.Draw.SimpleShapeTap = L.Draw.Feature.extend({
 			//TODO refactor: move cursor to styles
 			this._container.style.cursor = 'crosshair';
 
-			// this._tooltip.updateContent({ text: this._initialLabelText });
+			this._tooltip.updateContent({ text: this._initialLabelText });
 
 			// Make a transparent marker that will used to catch click events. These click
 			// events will create the vertices. We need to do this so we can ensure that
@@ -127,7 +127,6 @@ L.Draw.SimpleShapeTap = L.Draw.Feature.extend({
 
 	_onMouseDown: function (e) {
 		if (!this._clickHandled && !this._touchHandled && !this._disableMarkers) {
-			console.log('new simpleshape: _onMouseDown');
 			this._onMouseMove(e);
 			this._clickHandled = true;
 			this._disableNewMarkers();
@@ -158,7 +157,6 @@ L.Draw.SimpleShapeTap = L.Draw.Feature.extend({
 	},
 
 	_onMouseUp: function (e) {
-		console.log('new simpleshape: _onMouseUp');
 		var originalEvent = e.originalEvent;
 		var clientX = originalEvent.clientX;
 		var clientY = originalEvent.clientY;
@@ -188,12 +186,10 @@ L.Draw.SimpleShapeTap = L.Draw.Feature.extend({
 	// Add a vertex to the end of the polyline
 	addVertex: function (latlng) {
 
-		console.log('new simpleshape: addVertex');
 		// placeholder: do error checking and setting the tooltip here
 
 		this._marker = this._createMarker(latlng);
 		this._startLatLng = latlng;
-		console.log("startlatlng", latlng);
 		// this._map.addLayer(this._poly);
 
 		// this._vertexChanged(latlng, true);
@@ -206,7 +202,6 @@ L.Draw.SimpleShapeTap = L.Draw.Feature.extend({
 		var clientX;
 		var clientY;
 		if (originalEvent.touches && originalEvent.touches[0] && !this._clickHandled && !this._touchHandled && !this._disableMarkers) {
-			console.log('new simpleshape: _onTouch');
 
 			clientX = originalEvent.touches[0].clientX;
 			clientY = originalEvent.touches[0].clientY;
@@ -228,7 +223,7 @@ L.Draw.SimpleShapeTap = L.Draw.Feature.extend({
 		// should this be moved to _updateGuide() ?
 		this._currentLatLng = latlng;
 
-		// this._updateTooltip(latlng); // todo: add in later
+		this._updateTooltip(latlng);
 
 		// Update the guide line
 		// this._updateGuide(newPos); // todo: add in later
@@ -278,6 +273,12 @@ L.Draw.SimpleShapeTap = L.Draw.Feature.extend({
 		this._drawShape(latlng);
 		this._fireCreatedEvent();
 		this.disable(); // todo: find out why this doesn't work
+	},
+
+	_getTooltipText: function () {
+		return {
+			text: this._endLabelText
+		};
 	},
 
 });
