@@ -70,7 +70,7 @@ L.Draw.SimpleShapeTap = L.Draw.Feature.extend({
 			this._map
 				.on('mouseup', this._onMouseUp, this) // Necessary for 0.7 compatibility
 				.on('mousemove', this._onMouseMove, this)
-				.on('touchstart', this._onTouch, this)
+				.on('touchend', this._onTouch, this)
 				;
 
 		}
@@ -103,7 +103,7 @@ L.Draw.SimpleShapeTap = L.Draw.Feature.extend({
 			this._map
 				.off('mouseup', this._onMouseUp, this)
 				.off('mousemove', this._onMouseMove, this)
-				.off('touchstart', this._onTouch, this)
+				.off('touchend', this._onTouch, this)
 				.off('click', this._onTouch, this);
 		}
 	},
