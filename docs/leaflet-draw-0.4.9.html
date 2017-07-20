@@ -1363,9 +1363,10 @@ Triggered when the user has finished removing shapes (remove mode) and saves.</t
 </td>
 	</tr>
 	<tr id='l-geometryutil-readablearea'>
-		<td><code><b>readableArea</b>(<i>area</i>, <i>isMetric</i>)</nobr></code></td>
+		<td><code><b>readableArea</b>(<i>area</i>, <i>isMetric</i>, <i>precision</i>)</nobr></code></td>
 		<td><code>string</code></td>
-		<td><p>Returns a readable area string in yards or metric</p>
+		<td><p>Returns a readable area string in yards or metric.
+The value will be rounded as defined by the precision option object.</p>
 </td>
 	</tr>
 	<tr id='l-geometryutil-readabledistance'>
@@ -1375,9 +1376,10 @@ Triggered when the user has finished removing shapes (remove mode) and saves.</t
 </td>
 	</tr>
 	<tr id='l-geometryutil-readabledistance'>
-		<td><code><b>readableDistance</b>(<i>distance</i>, <i>isMetric</i>, <i>useFeet</i>, <i>isNauticalMile</i>)</nobr></code></td>
+		<td><code><b>readableDistance</b>(<i>distance</i>, <i>isMetric</i>, <i>useFeet</i>, <i>isNauticalMile</i>, <i>precision</i>)</nobr></code></td>
 		<td><code>string</code></td>
-		<td><p>Converts metric distance to distance string.</p>
+		<td><p>Converts metric distance to distance string.
+The value will be rounded as defined by the precision option object.</p>
 </td>
 	</tr>
 </tbody></table>
@@ -1720,6 +1722,282 @@ This will be depreciated</p>
 </section>
 
 
+</section><h2 id='l-draw-circletap'>L.Draw.CircleTap</h2><p>Doesn&#39;t rely on drag to complete shape</p>
+
+<section>
+<h3 id='l-draw-circletap-method'>Methods</h3>
+
+<section >
+
+
+
+
+<table><thead>
+	<tr>
+		<th>Method</th>
+		<th>Returns</th>
+		<th>Description</th>
+	</tr>
+	</thead><tbody>
+	<tr id='l-draw-circletap-initialize'>
+		<td><code><b>initialize</b>()</nobr></code></td>
+		<td><code>void</code></td>
+		<td></td>
+	</tr>
+</tbody></table>
+
+</section>
+
+
+<div class='accordion'>
+	<label><span class='expander'>▶</span> Methods inherited from <a href='#l-draw-simpleshapetap'>L.Draw.SimpleShapeTap</a></label>
+	<div class='accordion-overflow'>
+		<div class='accordion-content'><section >
+
+
+
+
+<table><thead>
+	<tr>
+		<th>Method</th>
+		<th>Returns</th>
+		<th>Description</th>
+	</tr>
+	</thead><tbody>
+	<tr id='l-draw-circletap-addhooks'>
+		<td><code><b>addHooks</b>()</nobr></code></td>
+		<td><code>void</code></td>
+		<td><p>Add listener hooks to this handler.</p>
+</td>
+	</tr>
+	<tr id='l-draw-circletap-removehooks'>
+		<td><code><b>removeHooks</b>()</nobr></code></td>
+		<td><code>void</code></td>
+		<td><p>Remove listener hooks from this handler.</p>
+</td>
+	</tr>
+	<tr id='l-draw-circletap-addvertex'>
+		<td><code><b>addVertex</b>()</nobr></code></td>
+		<td><code>void</code></td>
+		<td><p>Add a vertex to the end of the polyline</p>
+</td>
+	</tr>
+</tbody></table>
+
+</section></div>
+	</div>
+</div>
+
+<div class='accordion'>
+	<label><span class='expander'>▶</span> Methods inherited from <a href='#l-draw-feature'>L.Draw.Feature</a></label>
+	<div class='accordion-overflow'>
+		<div class='accordion-content'><section >
+
+
+
+
+<table><thead>
+	<tr>
+		<th>Method</th>
+		<th>Returns</th>
+		<th>Description</th>
+	</tr>
+	</thead><tbody>
+	<tr id='l-draw-circletap-enable'>
+		<td><code><b>enable</b>()</nobr></code></td>
+		<td><code>void</code></td>
+		<td><p>Enables this handler</p>
+</td>
+	</tr>
+	<tr id='l-draw-circletap-setoptions'>
+		<td><code><b>setOptions</b>(<i>object</i>)</nobr></code></td>
+		<td><code>void</code></td>
+		<td><p>Sets new options to this handler</p>
+</td>
+	</tr>
+</tbody></table>
+
+</section></div>
+	</div>
+</div>
+
+</section><h2 id='l-draw-rectangletap'>L.Draw.RectangleTap</h2><p>Doesn&#39;t rely on drag to complete shape</p>
+
+<section>
+<h3 id='l-draw-rectangletap-method'>Methods</h3>
+
+<section >
+
+
+
+
+<table><thead>
+	<tr>
+		<th>Method</th>
+		<th>Returns</th>
+		<th>Description</th>
+	</tr>
+	</thead><tbody>
+	<tr id='l-draw-rectangletap-initialize'>
+		<td><code><b>initialize</b>()</nobr></code></td>
+		<td><code>void</code></td>
+		<td></td>
+	</tr>
+</tbody></table>
+
+</section>
+
+
+<div class='accordion'>
+	<label><span class='expander'>▶</span> Methods inherited from <a href='#l-draw-simpleshapetap'>L.Draw.SimpleShapeTap</a></label>
+	<div class='accordion-overflow'>
+		<div class='accordion-content'><section >
+
+
+
+
+<table><thead>
+	<tr>
+		<th>Method</th>
+		<th>Returns</th>
+		<th>Description</th>
+	</tr>
+	</thead><tbody>
+	<tr id='l-draw-rectangletap-addhooks'>
+		<td><code><b>addHooks</b>()</nobr></code></td>
+		<td><code>void</code></td>
+		<td><p>Add listener hooks to this handler.</p>
+</td>
+	</tr>
+	<tr id='l-draw-rectangletap-removehooks'>
+		<td><code><b>removeHooks</b>()</nobr></code></td>
+		<td><code>void</code></td>
+		<td><p>Remove listener hooks from this handler.</p>
+</td>
+	</tr>
+	<tr id='l-draw-rectangletap-addvertex'>
+		<td><code><b>addVertex</b>()</nobr></code></td>
+		<td><code>void</code></td>
+		<td><p>Add a vertex to the end of the polyline</p>
+</td>
+	</tr>
+</tbody></table>
+
+</section></div>
+	</div>
+</div>
+
+<div class='accordion'>
+	<label><span class='expander'>▶</span> Methods inherited from <a href='#l-draw-feature'>L.Draw.Feature</a></label>
+	<div class='accordion-overflow'>
+		<div class='accordion-content'><section >
+
+
+
+
+<table><thead>
+	<tr>
+		<th>Method</th>
+		<th>Returns</th>
+		<th>Description</th>
+	</tr>
+	</thead><tbody>
+	<tr id='l-draw-rectangletap-enable'>
+		<td><code><b>enable</b>()</nobr></code></td>
+		<td><code>void</code></td>
+		<td><p>Enables this handler</p>
+</td>
+	</tr>
+	<tr id='l-draw-rectangletap-setoptions'>
+		<td><code><b>setOptions</b>(<i>object</i>)</nobr></code></td>
+		<td><code>void</code></td>
+		<td><p>Sets new options to this handler</p>
+</td>
+	</tr>
+</tbody></table>
+
+</section></div>
+	</div>
+</div>
+
+</section><h2 id='l-draw-simpleshapetap'>L.Draw.SimpleShapeTap</h2><p>Doesn&#39;t rely on drag to complete shape</p>
+
+<section>
+<h3 id='l-draw-simpleshapetap-method'>Methods</h3>
+
+<section >
+
+
+
+
+<table><thead>
+	<tr>
+		<th>Method</th>
+		<th>Returns</th>
+		<th>Description</th>
+	</tr>
+	</thead><tbody>
+	<tr id='l-draw-simpleshapetap-initialize'>
+		<td><code><b>initialize</b>()</nobr></code></td>
+		<td><code>void</code></td>
+		<td></td>
+	</tr>
+	<tr id='l-draw-simpleshapetap-addhooks'>
+		<td><code><b>addHooks</b>()</nobr></code></td>
+		<td><code>void</code></td>
+		<td><p>Add listener hooks to this handler.</p>
+</td>
+	</tr>
+	<tr id='l-draw-simpleshapetap-removehooks'>
+		<td><code><b>removeHooks</b>()</nobr></code></td>
+		<td><code>void</code></td>
+		<td><p>Remove listener hooks from this handler.</p>
+</td>
+	</tr>
+	<tr id='l-draw-simpleshapetap-addvertex'>
+		<td><code><b>addVertex</b>()</nobr></code></td>
+		<td><code>void</code></td>
+		<td><p>Add a vertex to the end of the polyline</p>
+</td>
+	</tr>
+</tbody></table>
+
+</section>
+
+
+<div class='accordion'>
+	<label><span class='expander'>▶</span> Methods inherited from <a href='#l-draw-feature'>L.Draw.Feature</a></label>
+	<div class='accordion-overflow'>
+		<div class='accordion-content'><section >
+
+
+
+
+<table><thead>
+	<tr>
+		<th>Method</th>
+		<th>Returns</th>
+		<th>Description</th>
+	</tr>
+	</thead><tbody>
+	<tr id='l-draw-simpleshapetap-enable'>
+		<td><code><b>enable</b>()</nobr></code></td>
+		<td><code>void</code></td>
+		<td><p>Enables this handler</p>
+</td>
+	</tr>
+	<tr id='l-draw-simpleshapetap-setoptions'>
+		<td><code><b>setOptions</b>(<i>object</i>)</nobr></code></td>
+		<td><code>void</code></td>
+		<td><p>Sets new options to this handler</p>
+</td>
+	</tr>
+</tbody></table>
+
+</section></div>
+	</div>
+</div>
+
 </section><h2 id='l-edittoolbar'>L.EditToolbar</h2>
 <section>
 <h3 id='l-edittoolbar-method'>Methods</h3>
@@ -1950,10 +2228,28 @@ for this section of the documentation, please edit docs-misc.leafdoc in the buil
 <td>The options used when drawing the polyline/polygon on the map.</td>
 </tr>
 <tr>
+<td>showLength</td>
+<td>Bool</td>
+<td><code>true</code></td>
+<td>Show the length of the drawn line. <strong>The area is only approximate and become less accurate the larger the polygon is.</strong></td>
+</tr>
+<tr>
 <td>metric</td>
 <td>Bool</td>
 <td><code>true</code></td>
-<td>Determines which measurement system (metric or imperial) is used.</td>
+<td>Use the metric measurement system.</td>
+</tr>
+<tr>
+<td>feet</td>
+<td>Bool</td>
+<td><code>true</code></td>
+<td>Use feet instead of yards and miles, when not using the metric measurement system.</td>
+</tr>
+<tr>
+<td>nautic</td>
+<td>Bool</td>
+<td><code>false</code></td>
+<td>Use nautic miles instead of yards and miles, when not using the metric measurement system nor feet.</td>
 </tr>
 <tr>
 <td>zIndexOffset</td>
@@ -1985,6 +2281,36 @@ for this section of the documentation, please edit docs-misc.leafdoc in the buil
 <td>Bool</td>
 <td><code>false</code></td>
 <td>Show the area of the drawn polygon in m², ha or km². <strong>The area is only approximate and become less accurate the larger the polygon is.</strong></td>
+</tr>
+<tr>
+<td>showLength</td>
+<td>Bool</td>
+<td><code>false</code></td>
+<td>Show the length of the drawn line. <strong>The area is only approximate and become less accurate the larger the polygon is.</strong></td>
+</tr>
+<tr>
+<td>metric</td>
+<td>Object</td>
+<td><code>true</code></td>
+<td>Use the metric measurement system. Can be a boolean value, but can also be an array to specify which units to use. Possible units are <code>km</code> (kilometers), <code>ha</code> (hectares), <code>m</code> (metres). So a value of <code>[&#39;km&#39;, &#39;m&#39;]</code> means that the length will be shown in metres and, when more than a 1000 metres, in kilometers, and the area will be shown in m² or km² and acres will not be used.</td>
+</tr>
+<tr>
+<td>feet</td>
+<td>Bool</td>
+<td><code>true</code></td>
+<td>Use feet instead of yards and miles, when not using the metric measurement system.</td>
+</tr>
+<tr>
+<td>nautic</td>
+<td>Bool</td>
+<td><code>false</code></td>
+<td>Use nautic miles instead of yards and miles, when not using the metric measurement system nor feet.</td>
+</tr>
+<tr>
+<td>precision</td>
+<td>Object</td>
+<td><code>{km: 2, ha: 2, m: 0, mi: 2, ac: 2, yd: 0, ft: 0, nm: 2}</code></td>
+<td>Defines the precision to use for numbers of each type of unit. Possible units are <code>km</code> (kilometers), <code>ha</code> (hectares), <code>m</code> (metres), <code>mi</code> (miles), <code>ac</code> (acres), <code>ya</code> (yards), <code>ft</code> (feet), <code>nm</code> (nautical miles). For example <code>{km: 1}</code> changes the default precision for km and km² to one which gives values like <code>1.5 km</code> and <code>15.0 km²</code> in stead of <code>1.53 km</code> and <code>15.01 km²</code>.</td>
 </tr>
 </tbody>
 </table>
